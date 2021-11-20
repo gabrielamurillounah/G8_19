@@ -15,7 +15,7 @@
     
     
 
-    require_once("../config/conexion.php");
+    require_once("../../Config/Conexion.php");
     require_once("../../SociosNegocio/models/Socios.php");
     $socios =new Socios();
 
