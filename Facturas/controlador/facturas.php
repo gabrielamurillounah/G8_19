@@ -11,8 +11,8 @@
     header('Access-Control-Allow-Origin: *');   
     header('Content-Type: application/json'); 
 
-   require_once("../config/conexion.php");
-   require_once("../models/FACTURAS.php");
+   require_once("../../config/conexion.php");
+   require_once("../../Facturas/models/FACTURAS.php");
    
    $facturas = new FACTURAS();
 
