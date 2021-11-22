@@ -57,23 +57,23 @@
             $conectar= parent::conexion();
             parent::set_names();
             $sql="UPDATE ma_facturas SET
-            ID=?, NUMERO_FACTURA=?,
+            NUMERO_FACTURA=?,
             ID_SOCIO=?, FECHA_FACTURA=?,
             DETALLE=?, SUB_TOTAL=?,
             TOTAL_ISV=?, TOTAL=?,
             FECHA_VENCIMIENTO=?, ESTADO=?
             WHERE ID = ?;";
             $sql=$conectar->prepare($sql);
-            $sql->bindvalue(1, $ID);
-            $sql->bindvalue(2, $NUMERO_FACTURA);
-            $sql->bindValue(3, $ID_SOCIO);
-            $sql->bindValue(4, $FECHA_FACTURA);
-            $sql->bindvalue(5, $DETALLE);
-            $sql->bindvalue(6, $SUB_TOTAL);
-            $sql->bindvalue(7, $TOTAL_ISV);
-            $sql->bindvalue(8, $TOTAL);
-            $sql->bindvalue(9, $FECHA_VENCIMIENTO);
-            $sql->bindvalue(10, $ESTADO);
+            $sql->bindvalue(1, $NUMERO_FACTURA);
+            $sql->bindValue(2, $ID_SOCIO);
+            $sql->bindValue(3, $FECHA_FACTURA);
+            $sql->bindvalue(4, $DETALLE);
+            $sql->bindvalue(5, $SUB_TOTAL);
+            $sql->bindvalue(6, $TOTAL_ISV);
+            $sql->bindvalue(7, $TOTAL);
+            $sql->bindvalue(8, $FECHA_VENCIMIENTO);
+            $sql->bindvalue(9, $ESTADO);
+            $sql->bindvalue(10, $ID);
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }    
