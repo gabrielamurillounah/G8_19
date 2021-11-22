@@ -15,7 +15,7 @@
         public function get_factura($ID){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="SELECT * FROM ma_facturas WHERE ESTADO = '1' AND ID = ?";
+            $sql="SELECT * FROM ma_facturas WHERE ESTADO = 'f' AND ID = ?";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $ID);
             $sql->execute();
